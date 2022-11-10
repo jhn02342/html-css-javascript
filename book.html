@@ -12,6 +12,25 @@
     <script>
         const name = prompt("안녕하세요?");
         document.write("<b><big>"+ name +"</b></big>, 환영합니다.");
+
+        function rangeValueChange(){
+          let value = document.getElementById("rangeInput").value;
+          document.getElementById("rangeValue").innerHTML = value;
+          document.getElementById("woo").value = value;
+        }
+
+        function numberValueChange(){
+          let value = document.getElementById("woo").value;
+          document.getElementById("rangeValue").innerHTML = value;
+          document.getElementById("rangeInput").value = value;
+        }
+
+        function NName(){
+          let value = document.getElementById("user-name").value;
+          document.getElementById("me").innerHTML = value;
+        }
+
+
     </script>
         <p>안녕하세요</p>
         <a href="https://github.com/jhn02342/html-css-javascript.git" target="_blank">존나어렵네</a><br>
@@ -67,8 +86,8 @@
   </fieldset>
   <fieldset>
     <legend>입력정보</legend>
-    <label>이름:<input type="text" size="20" id="user-name" autofocus required></label>
-    <input type="submit" value="실명확인" id="user-name">
+    <label>이름:<input type="text" size="20" id="user-name" onchange="NName()" autofocus required></label>
+    <input type="submit" value="실명확인">
   
     <label>전화번호:<input type="tel" size="30" id="user-tel" placeholder="-는 치지말아주세용" ></label>
     <input type="submit" value="번따성공" id="user-tel" >
@@ -83,7 +102,7 @@
 
 
 <p><fieldset>
-  <legend>김상윤,함우성</legend>
+  <legend id="me" ><span id="user-name"></span></legend>
   <p><b>상윤 오늘 한것</b></p>
   <label><input type="checkbox">술마시기</label>
   <label><input type="checkbox">담배피기</label>
@@ -95,10 +114,10 @@
 </fieldset></p>
 <ul type="a">
   <li>
-    <input type="number" max="10"/>최대 10개
+    <input id="woo" type="number" max="55" onchange="numberValueChange()"/>최대 55개
   </li>
   <li>
-    <input type="range" min="0" max="55" value="1"/>개  
+    <input id="rangeInput" type="range" min="0" max="55" value="1" onchange="rangeValueChange()"/><span id="rangeValue"></span>개  
   </li>
 </ul>
 
