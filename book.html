@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -45,41 +44,68 @@
 <video src="images/세영지우식전영상.mp4" controls width="50%" height="50%" preload="metadata"></video>
 <h3>세영지우 식전영상</h3>
 
+<form>
+  <fieldset>
+    <legend>상품선택시</legend>
+  </fieldset>
+  <fieldset>
+    <legend>배송 정보</legend>
+  </fieldset>
+</form>
 
-    
+<label for="user-id">아이디(6글자이상)</label>
+<input type="text" id="user-id">
 
-</body>
-=======
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="codigakma.js"></script>
-</head>
-<body>
-    <script>
-        const name = prompt("안녕하세요?");
-        document.write("<b><big>"+ name +"</b></big>님, 환영합니다.");
-    </script>
-        안녕하세요<a href="https://github.com/jhn02342/html-css-javascript.git">존나어렵네</a><br>
-   
-   
-        <table border="2" bordercolor="blue"  width="200px">
-    <caption>지우와 세영식단표</caption>
+<label>아이디(6글자이상)<input type="text"></label>
+<label>비밀번호(특수문자포함8글자이상)<input type="password"></label>
+
+<form>
+  <fieldset>
+    <label>아이디:<input type="text" size="10" id="user-id"></label>
+    <label>비밀번호:<input type="password" size="10" id="user-pw"></label>
+    <input type="submit" value="로그인">
+  </fieldset>
+  <fieldset>
+    <legend>입력정보</legend>
+    <label>이름:<input type="text" size="20" id="user-name" autofocus required></label>
+    <input type="submit" value="실명확인" id="user-name">
   
-      <tr bgcolor="gray" align="center">
-        <td>월요일</td>
-        <td>된장찌개</td>
-      </tr>
-      <tr>
-        <td>화요일</td>ㅇ
-        <td>부대찌개</td>
-      </tr>
-   </table>     
-    
+    <label>전화번호:<input type="tel" size="30" id="user-tel" placeholder="-는 치지말아주세용" ></label>
+    <input type="submit" value="번따성공" id="user-tel" >
+    <div>
+    <input type="time" min="2020-03-21" max="2200-01-01">
+    </div>
+  </fieldset>
+  <input type="submit" value="회원가입">
+  <input type="reset" value="취소">
+</form>
+<!----------------------------------------------------------------------------------------->
+
+
+<p><fieldset>
+  <legend>김상윤,함우성</legend>
+  <p><b>상윤 오늘 한것</b></p>
+  <label><input type="checkbox">술마시기</label>
+  <label><input type="checkbox">담배피기</label>
+  <label><input type="checkbox">치킨먹기</label>
+  <p><i>함우성 닭가슴살몇개?</i></p>
+  <label><input type="checkbox">4개미만</label>
+  <label><input type="checkbox">5개</label>
+  <label><input type="checkbox">6개이상</label>
+</fieldset></p>
+<ul type="a">
+  <li>
+    <input type="number" max="10"/>최대 10개
+  </li>
+  <li>
+    <input type="range" min="0" max="55" value="1"/>개  
+  </li>
+</ul>
+
+<form>
+  <input type="button" value="깃허브이동" onclick="window.open('https://github.com/jhn02342/html-css-javascript.git')">
+</form>
+
+
 </body>
->>>>>>> 20776b569a05d72d250f1e76c6c69a530cc793d4
 </html>
